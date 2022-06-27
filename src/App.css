@@ -1,3 +1,13 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 body {
   color: black;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container__app {
+  padding: 50px 0px 20px 0px;
+  max-width: 550px;
+  margin: 10px auto;
+  border: solid;
 }

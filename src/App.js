@@ -1,11 +1,14 @@
 import "./App.css";
 import Today from "./today/Today";
+import Searchbar from "./searchbar/Searchbar";
 
 function App() {
   return (
-    <div className="App">
-      <p>Weather App</p>
-      <Today />
+    <div className="container container__app">
+      <div className="App">
+        <Today />
+        <Searchbar />
+      </div>
     </div>
   );
 }
