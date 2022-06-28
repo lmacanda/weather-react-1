@@ -17,7 +17,9 @@ export default function Today() {
       <h4>sunny</h4>
       <hr />
       <h3>
-        <RiTempHotLine className="icon__temperature" /> 18°C
+        <RiTempHotLine className="icon__temperature" />{" "}
+        <span className="temperature">18</span>
+        <span className="unit">°C</span>
       </h3>
       <hr />
       <h4>wind: 7 Km/h</h4>

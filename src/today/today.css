@@ -16,3 +16,7 @@ h4 {
 .icon__temperature {
   color: #f15d46;
 }
+
+.temperature {
+  font-size: larger;
+}
