@@ -3,18 +3,17 @@ import "./searchbar.css";
 
 export default function Searchbar() {
   return (
-    <nav className="searchbar">
-      <form className="form">
-        <input
-          type="search"
-          id="city"
-          value="Enter a city"
-          aria-label="search"
-        ></input>
-        <button type="submit" value="search">
-          search
-        </button>
-      </form>
-    </nav>
+    <form className="form">
+      <input
+        type="search"
+        placeholder="Enter a city"
+        id="city"
+        aria-label="search"
+        autoFocus="on"
+      />
+      <button className="btn btn-primary" type="submit" value="search">
+        search
+      </button>
+    </form>
   );
 }

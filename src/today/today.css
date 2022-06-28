@@ -7,8 +7,12 @@ h4 {
   font-weight: 500;
 }
 
-.icon__today {
+.image__today {
   text-align: center;
   font-size: 60px;
   line-height: 0;
+}
+
+.icon__temperature {
+  color: #f15d46;
 }

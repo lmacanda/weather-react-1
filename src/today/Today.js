@@ -1,21 +1,24 @@
 import React from "react";
 import "./today.css";
+import { RiTempHotLine } from "react-icons/ri";
 
 export default function Today() {
   return (
     <div className="container container__today">
       <h1>Lisbon</h1>
-      <h2>Today</h2>
+      <h2>Tuesday 19:31</h2>
 
-      <div className="icon icon__today">
+      <div className="image__today">
         <img
           src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
           alt="sunny"
         />
       </div>
-      <h4>description: sunny</h4>
+      <h4>sunny</h4>
       <hr />
-      <h3>Temperature: 18°C</h3>
+      <h3>
+        <RiTempHotLine className="icon__temperature" /> 18°C
+      </h3>
       <hr />
       <h4>wind: 7 Km/h</h4>
       <hr />
