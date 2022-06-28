@@ -10,13 +10,13 @@ export default function Today() {
       <div className="icon icon__today">
         <p>🌦</p>
       </div>
-      <h4>description</h4>
+      <h4>description: cloudy</h4>
       <hr />
-      <h3>Temperature</h3>
+      <h3>Temperature: 18ºC</h3>
       <hr />
-      <h4>wind</h4>
+      <h4>wind: 7 Km/h</h4>
       <hr />
-      <h4>humidity</h4>
+      <h4>humidity: 28%</h4>
       <hr />
     </div>
   );

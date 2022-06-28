@@ -1,9 +1,13 @@
 .form {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   line-height: 1.5rem;
   font-family: "Bebas Neue", cursive;
+  background: radial-gradient(
+    321px at 8.3% 75.7%,
+    rgb(209, 247, 241, 0.2) 0%,
+    rgb(249, 213, 213, 0.2) 81%
+  );
 }
 
 .form label {
