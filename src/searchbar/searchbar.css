@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  line-height: 1.5rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.form label {
+  margin: 5px 10px 5px 0;
+  font-family: "Bebas Neue", cursive;
+}
+
+.form input {
+  vertical-align: middle;
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  width: 80%;
+  border-radius: 0.25rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #f15d46;
+  border: 1px solid #f15d46;
+  border-radius: 0.25rem;
+  color: black;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: auto 10px auto auto;
+  font-family: "Bebas Neue", cursive;
+}
+
+.form button:hover {
+  background-color: black;
+  color: #f15d46;
+  border: 1px solid black;
+}
