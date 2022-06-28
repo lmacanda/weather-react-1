@@ -8,11 +8,14 @@ export default function Today() {
       <h2>Today</h2>
 
       <div className="icon icon__today">
-        <p>🌦</p>
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="sunny"
+        />
       </div>
-      <h4>description: cloudy</h4>
+      <h4>description: sunny</h4>
       <hr />
-      <h3>Temperature: 18ºC</h3>
+      <h3>Temperature: 18°C</h3>
       <hr />
       <h4>wind: 7 Km/h</h4>
       <hr />
