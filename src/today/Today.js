@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./today.css";
-import { RiTempHotLine } from "react-icons/ri";
+
 import axios from "axios";
-import FormattedDate from "../FormattedDate";
+
+import WeatherInfo from "../WeatherInfo";
 
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({
@@ -25,26 +26,9 @@ export default function Today(props) {
     /* Use conditional statement if the object is ready display the info, else make an API call */
     return (
       <div className="container container__today">
-        <h1>{weatherData.city}</h1>
-        <h2>
-          <FormattedDate date={weatherData.date} />
-        </h2>
-
-        <div className="image__today">
-          <img src={weatherData.icon} alt={weatherData.description} />
-        </div>
-        <h4>{weatherData.description}</h4>
-        <hr />
-        <h3>
-          <RiTempHotLine className="icon__temperature" />{" "}
-          <span className="temperature">{weatherData.temperature}</span>
-          <span className="unit">°C</span>
-        </h3>
-        <hr />
-        <h4>wind: {weatherData.wind} Km/h</h4>
-        <hr />
-        <h4>humidity: {weatherData.humidity}%</h4>
-        <hr />
+        <WeatherInfo data={weatherData} />{" "}
+        {/* Create props to send info to
+        WeatherInfo component as props */}
       </div>
     );
   } else {
