@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import "./today.css";
 import { RiTempHotLine } from "react-icons/ri";
 import axios from "axios";
+import FormattedDate from "../FormattedDate";
 
 export default function Today(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [weatherData, setWeatherData] = useState({
+    ready: false,
+  }); /* Create an object to store all the weather info */
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Wednesday 17:40",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       icon: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
@@ -20,10 +22,13 @@ export default function Today(props) {
   }
 
   if (weatherData.ready) {
+    /* Use conditional statement if the object is ready display the info, else make an API call */
     return (
       <div className="container container__today">
         <h1>{weatherData.city}</h1>
-        <h2>{weatherData.response}</h2>
+        <h2>
+          <FormattedDate date={weatherData.date} />
+        </h2>
 
         <div className="image__today">
           <img src={weatherData.icon} alt={weatherData.description} />
