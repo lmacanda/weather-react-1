@@ -1,7 +1,6 @@
-import React from "react";
-import { RiTempHotLine } from "react-icons/ri";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./weatherIcon/WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,15 +11,11 @@ export default function WeatherInfo(props) {
       </h2>
 
       <div className="image__today">
-        <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        <WeatherIcon code={props.data.icon} />
       </div>
       <h4>{props.data.description}</h4>
       <hr />
-      <h3>
-        <RiTempHotLine className="icon__temperature" />{" "}
-        <span className="temperature">{props.data.temperature}</span>
-        <span className="unit">°C</span>
-      </h3>
+      <WeatherTemperature celsius={props.data.temperature} />
       <hr />
       <h4>wind: {props.data.wind} Km/h</h4>
       <hr />
