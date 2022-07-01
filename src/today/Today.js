@@ -15,7 +15,7 @@ export default function Today(props) {
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`, //add interpolation for rendering icon from an arrey
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
     });
