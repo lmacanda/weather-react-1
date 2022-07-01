@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./today.css";
-
 import axios from "axios";
-
 import WeatherInfo from "../WeatherInfo";
 
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({
     ready: false,
   }); /* Create an object to store all the weather info */
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -22,6 +21,24 @@ export default function Today(props) {
     });
   }
 
+  function Search() {
+    const apiKey = "46b29bb09ed0ef009d3c22278289179e";
+    let units = "metric";
+    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
+    let apiUrl = `${apiEndPoint}${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    Search();
+    //search for a city
+  }
+
+  function changeCity(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     /* Use conditional statement if the object is ready display the info, else make an API call */
     return (
@@ -29,13 +46,14 @@ export default function Today(props) {
         <WeatherInfo data={weatherData} />{" "}
         {/* Create props to send info to
         WeatherInfo component as props */}
-        <form className="form">
+        <form onSubmit={handleSubmit} className="form">
           <input
             type="search"
             placeholder="Enter a city"
             id="city"
             aria-label="search"
             autoFocus="on"
+            onChange={changeCity}
           />
           <button className="btn btn-primary" type="submit" value="search">
             search
@@ -44,12 +62,7 @@ export default function Today(props) {
       </div>
     );
   } else {
-    const apiKey = "46b29bb09ed0ef009d3c22278289179e";
-    let units = "metric";
-    let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
-    let apiUrl = `${apiEndPoint}${props.defaultCity}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    Search();
     return "Loading...";
   }
 }
