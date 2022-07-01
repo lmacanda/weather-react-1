@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiTempHotLine } from "react-icons/ri";
+import "./weatherTemperature.css";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");

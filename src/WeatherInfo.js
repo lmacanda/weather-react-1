@@ -1,6 +1,6 @@
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./weatherIcon/WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
+import WeatherTemperature from "./weatherTemperature/WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
