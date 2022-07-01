@@ -1,6 +1,5 @@
 import "./App.css";
 import Today from "./today/Today";
-import Searchbar from "./searchbar/Searchbar";
 import Footer from "./footer/Footer";
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <div className="container container__app">
         <Today defaultCity="Lisbon" />
-        <Searchbar />
       </div>
       <Footer />
     </div>

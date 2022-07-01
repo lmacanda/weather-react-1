@@ -29,6 +29,18 @@ export default function Today(props) {
         <WeatherInfo data={weatherData} />{" "}
         {/* Create props to send info to
         WeatherInfo component as props */}
+        <form className="form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            id="city"
+            aria-label="search"
+            autoFocus="on"
+          />
+          <button className="btn btn-primary" type="submit" value="search">
+            search
+          </button>
+        </form>
       </div>
     );
   } else {
