@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./today.css";
 import axios from "axios";
 import WeatherInfo from "../WeatherInfo";
+import WeatherForecast from "../weatherForecast/WeatherForecast";
 
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({
@@ -46,6 +47,7 @@ export default function Today(props) {
         <WeatherInfo data={weatherData} />{" "}
         {/* Create props to send info to
         WeatherInfo component as props */}
+        <WeatherForecast />
         <form onSubmit={handleSubmit} className="form">
           <input
             type="search"
