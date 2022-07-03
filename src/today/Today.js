@@ -12,6 +12,7 @@ export default function Today(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
@@ -47,7 +48,7 @@ export default function Today(props) {
         <WeatherInfo data={weatherData} />{" "}
         {/* Create props to send info to
         WeatherInfo component as props */}
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
         <form onSubmit={handleSubmit} className="form">
           <input
             type="search"
