@@ -17,6 +17,11 @@ h4 {
   color: #f15d46;
 }
 
+svg.icon__temperature {
+  margin-bottom: -2px;
+  font-size: larger;
+}
+
 .temperature {
   font-size: larger;
 }
@@ -43,7 +48,7 @@ h4 {
   font-family: "Bebas Neue", cursive;
 }
 
-.form button {
+.btn-primary {
   padding: 10px 20px;
   background-color: #f15d46;
   border: 1px solid #f15d46;
@@ -55,14 +60,14 @@ h4 {
   font-family: "Bebas Neue", cursive;
 }
 
-.form button:hover {
+.btn-primary:hover {
   background-color: black;
   color: #f15d46;
   border: 1px solid black;
 }
 
 /******************* MEDIA QUERIES (MEDIUM DEVICES) ******************** */
-@media (max-width: 1024px) {
+@media (max-width: 820px) {
   .form input {
     margin: 10px 0;
     width: auto;

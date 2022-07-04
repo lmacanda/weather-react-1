@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./today.css";
+import "./weatherToday.css";
 import axios from "axios";
 import WeatherInfo from "../WeatherInfo";
 import WeatherForecast from "../weatherForecast/WeatherForecast";
@@ -35,6 +35,7 @@ export default function Today(props) {
     event.preventDefault();
     Search();
     //search for a city
+    event.target.reset();
   }
 
   function changeCity(event) {

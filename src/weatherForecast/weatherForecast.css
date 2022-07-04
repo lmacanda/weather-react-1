@@ -1,19 +1,12 @@
 .weather__forecast {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
 }
 
 .weather__forecast h4 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.forecast__icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 .forecast__temperature {
@@ -24,4 +17,19 @@
 
 .temp__min {
   color: #7c8083;
+}
+
+canvas {
+  margin: auto -10px;
+}
+
+article {
+  text-align: center;
+}
+
+/******************* MEDIA QUERIES (MEDIUM DEVICES) ******************** */
+@media (max-width: 820px) {
+  .weather__forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
