@@ -14,55 +14,16 @@ export default function WeatherForecast(props) {
     /*data from an array[0] */
     return (
       <div className="weather__forecast">
-        <WeatherForecastDay data={forecastInfo[0]} />
-        <article className="forecast_day">
-          <h4>Tuesday</h4>
-          <img
-            className="forecast__icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sunny"
-          ></img>
-          <div className="forecast__temperature">
-            <span className="temp__max">25° </span>
-            <span className="temp__min">18°</span>
-          </div>
-        </article>
-        <article className="forecast_day">
-          <h4>Wednesady</h4>
-          <img
-            className="forecast__icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sunny"
-          ></img>
-          <div className="forecast__temperature">
-            <span className="temp__max">25° </span>
-            <span className="temp__min">18°</span>
-          </div>
-        </article>
-        <article className="forecast_day">
-          <h4>Thursday</h4>
-          <img
-            className="forecast__icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sunny"
-          ></img>
-          <div className="forecast__temperature">
-            <span className="temp__max">25° </span>
-            <span className="temp__min">18°</span>
-          </div>
-        </article>
-        <article className="forecast_day">
-          <h4>Friday</h4>
-          <img
-            className="forecast__icon"
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="sunny"
-          ></img>
-          <div className="forecast__temperature">
-            <span className="temp__max">25° </span>
-            <span className="temp__min">18°</span>
-          </div>
-        </article>
+        {forecastInfo.map(function (dailyForecast, index) {
+          if (index < 6) {
+            return (
+              <div key={index}>
+                <WeatherForecastDay data={dailyForecast} />
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
     );
   } else {
